@@ -8,3 +8,8 @@ target/
 *.iws
 *.iml
 *.ipr
+
+### Eclipse ###
+.classpath
+.project
+/.settings
