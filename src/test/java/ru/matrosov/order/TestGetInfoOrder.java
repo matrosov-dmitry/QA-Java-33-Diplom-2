@@ -36,7 +36,7 @@ public class TestGetInfoOrder
             ValidatableResponse responseUser = stepsUser.userCreating (name, password, email);
             accessToken = stepsUser.getAccessToken (responseUser);
             List<String> ingredientsMap = stepsOrder.listIngredients ();
-            ValidatableResponse response = stepsOrder.orderCreatingWithAuthorization (ingredientsMap, accessToken);
+            stepsOrder.orderCreatingWithAuthorization (ingredientsMap, accessToken);
             ValidatableResponse responseInfo = stepsOrder.gettingInfoOrder (accessToken);
             check.checkStatusOk (responseInfo);
             check.checkBodyNotNullValue (responseInfo);
